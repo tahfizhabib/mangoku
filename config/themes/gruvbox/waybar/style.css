@@ -1,0 +1,324 @@
+* {
+    all: unset;
+    font-family: "Monaspace Krypton Var", "Monaspace Krypton", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(40, 40, 40, 0.96);
+    color: #ebdbb2;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+tooltip {
+    background: rgba(60, 56, 54, 0.98);
+    border: 0.5px solid rgba(131, 165, 152, 0.3);
+    border-radius: 6px;
+    padding: 10px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+tooltip label {
+    color: #ebdbb2;
+    font-size: 12px;
+}
+
+#workspaces {
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    padding: 0 3px;
+    min-width: 10px;
+    color: rgba(235, 219, 178, 0.5);
+    background-color: transparent;
+    border: none;
+    border-bottom: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: rgba(80, 73, 69, 0.7);
+    color: #ebdbb2;
+    border-bottom: none;
+}
+
+#workspaces button.active {
+    background-color: #504945;
+    color: #ebdbb2;
+    border-bottom: none;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(251, 73, 52, 0.3);
+    color: #282828;
+    border-bottom: none;
+}
+
+#window {
+    padding: 0 8px;
+    color: rgba(235, 219, 178, 0.5);
+    font-weight: normal;
+    font-size: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+#window:hover {
+    color: #ebdbb2;
+}
+
+#tray,
+#network,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#pulseaudio,
+#clock,
+#custom-expand-icon {
+    padding: 0 3px;
+    margin: 0;
+    color: #ebdbb2;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#tray {
+    padding: 0 3px;
+    margin-right: 1px;
+}
+
+#custom-expand-icon {
+    margin-left: 8px;
+    margin-right: 2px;
+    padding-bottom: 2px;
+}
+
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#battery:hover,
+#pulseaudio:hover,
+#clock:hover {
+    background-color: rgba(80, 73, 69, 0.7);
+}
+
+#network.disconnected {
+    color: rgba(235, 219, 178, 0.5);
+    background-color: rgba(80, 73, 69, 0.5);
+}
+
+#cpu.warning {
+    color: #ebdbb2;
+    background-color: rgba(215, 153, 33, 0.3);
+}
+
+#cpu.critical {
+    color: #ebdbb2;
+    background-color: rgba(251, 73, 52, 0.4);
+}
+
+#temperature.critical {
+    color: #ebdbb2;
+    background-color: rgba(251, 73, 52, 0.4);
+}
+
+#battery.warning {
+    color: #ebdbb2;
+    background-color: rgba(215, 153, 33, 0.3);
+}
+
+#battery.critical {
+    color: #ebdbb2;
+    background-color: rgba(251, 73, 52, 0.4);
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #ebdbb2;
+    background-color: rgba(131, 165, 152, 0.3);
+}
+
+#battery.full {
+    color: #ebdbb2;
+}
+
+#pulseaudio.muted {
+    color: rgba(235, 219, 178, 0.5);
+    background-color: rgba(80, 73, 69, 0.5);
+}
+
+#pulseaudio.source-muted {
+    color: rgba(235, 219, 178, 0.5);
+}
+
+#clock {
+    padding: 0 8px;
+    color: #ebdbb2;
+    letter-spacing: -0.5px;
+}
+
+#clock tooltip {
+    background: rgba(60, 56, 54, 0.98);
+    border: 0.5px solid rgba(131, 165, 152, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#clock tooltip label {
+    font-size: 13px;
+    color: #ebdbb2;
+}
+
+calendar {
+    background: rgba(60, 56, 54, 0.98);
+    color: #ebdbb2;
+    border-radius: 8px;
+    padding: 12px;
+    border: 0.5px solid rgba(131, 165, 152, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+calendar:selected {
+    background: rgba(80, 73, 69, 0.8);
+    border-radius: 4px;
+}
+
+calendar > grid > label {
+    font-size: 13px;
+    padding: 4px;
+    color: #ebdbb2;
+}
+
+calendar > grid > label.header {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ebdbb2;
+    padding: 6px;
+    letter-spacing: 0.5px;
+}
+
+calendar > grid > label.day-number {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px;
+    margin: 2px;
+    border-radius: 4px;
+    min-width: 28px;
+    min-height: 28px;
+}
+
+calendar > grid > label.day-number.today {
+    background: #83a598;
+    color: #282828;
+    font-weight: bold;
+}
+
+calendar > grid > label.day-number.other-month {
+    color: rgba(235, 219, 178, 0.3);
+}
+
+calendar > grid > label.day-number:hover {
+    background: rgba(80, 73, 69, 0.8);
+    border-radius: 4px;
+}
+
+calendar > grid > label.week-number {
+    font-size: 10px;
+    color: rgba(235, 219, 178, 0.5);
+    font-weight: normal;
+    padding: 2px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(80, 73, 69, 0.8);
+    border-radius: 2px;
+}
+
+#tray menu {
+    background-color: rgba(60, 56, 54, 0.98);
+    border: 0.5px solid rgba(131, 165, 152, 0.3);
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#tray menu menuitem {
+    background-color: transparent;
+    color: #ebdbb2;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    font-size: 9px;
+}
+
+#tray menu menuitem:hover {
+    background-color: rgba(80, 73, 69, 0.7);
+    color: #ebdbb2;
+}
+
+#custom-power {
+    color: #ebdbb2;
+    padding: 0 6px;
+    margin: 0 2px;
+    font-size: 15px;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#custom-power:hover {
+    background-color: rgba(80, 73, 69, 0.7);
+    color: #ebdbb2;
+}
+
+menu {
+    background-color: rgba(60, 56, 54, 0.98);
+    border: 0.5px solid rgba(131, 165, 152, 0.3);
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+menuitem {
+    background-color: transparent;
+    color: #ebdbb2;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    font-size: 9px;
+}
+
+menuitem:hover {
+    background-color: rgba(80, 73, 69, 0.7);
+    color: #ebdbb2;
+}
+
+menu separator {
+    background-color: rgba(131, 165, 152, 0.2);
+    margin: 4px 0;
+}
+
+#workspaces button:nth-child(n + 6) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}

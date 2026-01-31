@@ -1,0 +1,121 @@
+* {
+    bg-primary:             #282828f5;
+    bg-search:              #3c3836;
+    bg-selected:            #504945;
+    bg-transparent:         #00000000;
+    
+    text-primary:           #ebdbb2;
+    text-dim:               #83a59880;
+    text-selected:          #ebdbb2;
+    
+    border-color:           #83a598ff;
+    
+    background-color:       @bg-transparent;
+    text-color:             @text-primary;
+    font:                   "Monaspace Krypton 13";
+}
+
+configuration {
+    show-icons:             false;
+}
+
+window {
+    width:                  700px;
+    height:                 500px;
+    location:               center;
+    anchor:                 center;
+    transparency:           "real";
+    border-radius:          8px;
+    border:                 2px solid;
+    border-color:           @border-color;
+    background-color:       @bg-primary;
+    padding:                0px;
+}
+
+mainbox {
+    spacing:                0px;
+    padding:                10px;
+    margin:                 0px;
+    background-color:       @bg-transparent;
+    border:                 0px;
+    children:               [ "inputbar", "listview" ];
+}
+
+inputbar {
+    padding:                7px 10px;
+    margin:                 0px 0px 6px 0px;
+    spacing:                0px;
+    border-radius:          6px;
+    border:                 0px;
+    background-color:       @bg-search;
+    children:               [ "entry" ];
+}
+
+entry {
+    placeholder:            "Search emojis...";
+    placeholder-color:      @text-dim;
+    text-color:             @text-primary;
+    background-color:       @bg-transparent;
+    border:                 0px;
+}
+
+listview {
+    columns:                1;
+    lines:                  12;
+    dynamic:                true;
+    fixed-height:           true;
+    fixed-columns:          true;
+    spacing:                4px;
+    padding:                0px;
+    margin:                 0px;
+    cycle:                  false;
+    scrollbar:              true;
+    background-color:       @bg-transparent;
+    border:                 0px;
+}
+
+scrollbar {
+    width:                  5px;
+    handle-width:           5px;
+    handle-color:           @border-color;
+    background-color:       @bg-search;
+    border-radius:          4px;
+    padding:                0px;
+    margin:                 0px 0px 0px 4px;
+}
+
+element {
+    padding:                8px 10px;
+    spacing:                0px;
+    border-radius:          4px;
+    background-color:       @bg-transparent;
+    text-color:             @text-primary;
+    border:                 0px;
+}
+
+element normal.normal {
+    background-color:       @bg-transparent;
+    text-color:             @text-primary;
+}
+
+element alternate.normal {
+    background-color:       @bg-transparent;
+    text-color:             @text-primary;
+}
+
+element selected.normal {
+    background-color:       @bg-selected;
+    text-color:             @text-selected;
+}
+
+element selected.active {
+    background-color:       @bg-selected;
+    text-color:             @text-selected;
+}
+
+element-text {
+    vertical-align:         0.5;
+    background-color:       inherit;
+    text-color:             inherit;
+    border:                 0px;
+}

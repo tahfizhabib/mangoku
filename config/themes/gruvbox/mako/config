@@ -1,0 +1,27 @@
+sort=-time
+layer=overlay
+font=Monaspace Krypton 11
+width=300
+height=80
+border-size=2
+border-radius=6
+padding=8,10
+margin=10
+icons=1
+max-icon-size=32
+default-timeout=5000
+ignore-timeout=0
+background-color=#282828f5
+text-color=#ebdbb2
+border-color=#83a598
+progress-color=over #3c3836
+
+[urgency=low]
+border-color=#83a598
+
+[urgency=normal]
+border-color=#83a598
+
+[urgency=critical]
+border-color=#fb4934
+default-timeout=0
