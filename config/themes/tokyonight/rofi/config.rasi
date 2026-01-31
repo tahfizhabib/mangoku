@@ -1,0 +1,147 @@
+* {
+    bg-primary:             #1a1b26f5;
+    bg-secondary:           #414868;
+    bg-search:              #1f2335;
+    bg-transparent:         #00000000;
+    
+    text-white:             #c0caf5;
+    text-placeholder:       #7aa2f7;
+    
+    border-color:           #7aa2f7ee;
+    
+    background-color:       @bg-transparent;
+    text-color:             @text-white;
+    font:                   "Monaspace Krypton 11";
+}
+
+configuration {
+    modi:                   "drun";
+    show-icons:             true;
+    icon-theme:             "Papirus";
+    drun-display-format:    "{name}";
+    display-drun:           "";
+}
+
+window {
+    width:                  620px;
+    location:               center;
+    anchor:                 center;
+    transparency:           "real";
+    border-radius:          12px;
+    border:                 2px solid;
+    border-color:           @border-color;
+    background-color:       @bg-primary;
+    padding:                0px;
+}
+
+mainbox {
+    spacing:                0px;
+    padding:                10px;
+    margin:                 0px;
+    background-color:       @bg-transparent;
+    border:                 0px;
+    children:               [ "inputbar", "listview" ];
+}
+
+inputbar {
+    padding:                9px 12px;
+    margin:                 0px 0px 6px 0px;
+    spacing:                10px;
+    border-radius:          6px;
+    border:                 0px;
+    background-color:       @bg-search;
+    children:               [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color:             @text-white;
+    background-color:       @bg-transparent;
+    border:                 0px;
+}
+
+entry {
+    placeholder:            "Search";
+    placeholder-color:      @text-placeholder;
+    text-color:             @text-white;
+    background-color:       @bg-transparent;
+    border:                 0px;
+}
+
+listview {
+    columns:                1;
+    lines:                  6;
+    fixed-height:           true;
+    fixed-columns:          true;
+    spacing:                1px;
+    padding:                0px;
+    margin:                 0px;
+    cycle:                  false;
+    scrollbar:              false;
+    background-color:       @bg-transparent;
+    border:                 0px;
+}
+
+element {
+    padding:                9px 12px;
+    spacing:                12px;
+    border-radius:          6px;
+    background-color:       @bg-transparent;
+    text-color:             @text-white;
+    border:                 0px;
+}
+
+element normal.normal {
+    background-color:       @bg-transparent;
+    text-color:             @text-white;
+}
+
+element alternate.normal {
+    background-color:       @bg-transparent;
+    text-color:             @text-white;
+}
+
+element selected.normal {
+    background-color:       @bg-secondary;
+    text-color:             @text-white;
+}
+
+element selected.active {
+    background-color:       @bg-secondary;
+    text-color:             @text-white;
+}
+
+element-icon {
+    size:                   30px;
+    vertical-align:         0.5;
+    background-color:       inherit;
+    text-color:             inherit;
+    border:                 0px;
+}
+
+element-text {
+    vertical-align:         0.5;
+    background-color:       inherit;
+    text-color:             inherit;
+    border:                 0px;
+}
+
+message {
+    padding:                10px 12px;
+    background-color:       @bg-secondary;
+    border-radius:          6px;
+    margin:                 0px;
+    border:                 0px;
+}
+
+textbox {
+    text-color:             @text-white;
+    background-color:       @bg-transparent;
+    border:                 0px;
+}
+
+error-message {
+    padding:                12px;
+    background-color:       @bg-primary;
+    text-color:             @text-white;
+    border:                 0px;
+}

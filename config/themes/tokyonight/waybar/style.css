@@ -1,0 +1,324 @@
+* {
+    all: unset;
+    font-family: "Monaspace Krypton Var", "Monaspace Krypton", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.85);
+    color: #c0caf5;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+tooltip {
+    background: rgba(31, 35, 53, 0.98);
+    border: 0.5px solid rgba(122, 162, 247, 0.3);
+    border-radius: 6px;
+    padding: 10px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+tooltip label {
+    color: #c0caf5;
+    font-size: 12px;
+}
+
+#workspaces {
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    padding: 0 3px;
+    min-width: 10px;
+    color: rgba(192, 202, 245, 0.5);
+    background-color: transparent;
+    border: none;
+    border-bottom: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: rgba(65, 72, 104, 0.7);
+    color: #c0caf5;
+    border-bottom: none;
+}
+
+#workspaces button.active {
+    background-color: #414868;
+    color: #c0caf5;
+    border-bottom: none;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(247, 118, 142, 0.3);
+    color: #1a1b26;
+    border-bottom: none;
+}
+
+#window {
+    padding: 0 8px;
+    color: rgba(192, 202, 245, 0.5);
+    font-weight: normal;
+    font-size: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+#window:hover {
+    color: #c0caf5;
+}
+
+#tray,
+#network,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#pulseaudio,
+#clock,
+#custom-expand-icon {
+    padding: 0 3px;
+    margin: 0;
+    color: #c0caf5;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#tray {
+    padding: 0 3px;
+    margin-right: 1px;
+}
+
+#custom-expand-icon {
+    margin-left: 8px;
+    margin-right: 2px;
+    padding-bottom: 2px;
+}
+
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#battery:hover,
+#pulseaudio:hover,
+#clock:hover {
+    background-color: rgba(65, 72, 104, 0.7);
+}
+
+#network.disconnected {
+    color: rgba(192, 202, 245, 0.5);
+    background-color: rgba(65, 72, 104, 0.5);
+}
+
+#cpu.warning {
+    color: #c0caf5;
+    background-color: rgba(224, 175, 104, 0.3);
+}
+
+#cpu.critical {
+    color: #c0caf5;
+    background-color: rgba(247, 118, 142, 0.4);
+}
+
+#temperature.critical {
+    color: #c0caf5;
+    background-color: rgba(247, 118, 142, 0.4);
+}
+
+#battery.warning {
+    color: #c0caf5;
+    background-color: rgba(224, 175, 104, 0.3);
+}
+
+#battery.critical {
+    color: #c0caf5;
+    background-color: rgba(247, 118, 142, 0.4);
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #c0caf5;
+    background-color: rgba(122, 162, 247, 0.3);
+}
+
+#battery.full {
+    color: #c0caf5;
+}
+
+#pulseaudio.muted {
+    color: rgba(192, 202, 245, 0.5);
+    background-color: rgba(65, 72, 104, 0.5);
+}
+
+#pulseaudio.source-muted {
+    color: rgba(192, 202, 245, 0.5);
+}
+
+#clock {
+    padding: 0 8px;
+    color: #c0caf5;
+    letter-spacing: -0.5px;
+}
+
+#clock tooltip {
+    background: rgba(31, 35, 53, 0.98);
+    border: 0.5px solid rgba(122, 162, 247, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#clock tooltip label {
+    font-size: 13px;
+    color: #c0caf5;
+}
+
+calendar {
+    background: rgba(31, 35, 53, 0.98);
+    color: #c0caf5;
+    border-radius: 8px;
+    padding: 12px;
+    border: 0.5px solid rgba(122, 162, 247, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+calendar:selected {
+    background: rgba(65, 72, 104, 0.8);
+    border-radius: 4px;
+}
+
+calendar > grid > label {
+    font-size: 13px;
+    padding: 4px;
+    color: #c0caf5;
+}
+
+calendar > grid > label.header {
+    font-size: 12px;
+    font-weight: bold;
+    color: #c0caf5;
+    padding: 6px;
+    letter-spacing: 0.5px;
+}
+
+calendar > grid > label.day-number {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px;
+    margin: 2px;
+    border-radius: 4px;
+    min-width: 28px;
+    min-height: 28px;
+}
+
+calendar > grid > label.day-number.today {
+    background: #7aa2f7;
+    color: #1a1b26;
+    font-weight: bold;
+}
+
+calendar > grid > label.day-number.other-month {
+    color: rgba(192, 202, 245, 0.3);
+}
+
+calendar > grid > label.day-number:hover {
+    background: rgba(65, 72, 104, 0.8);
+    border-radius: 4px;
+}
+
+calendar > grid > label.week-number {
+    font-size: 10px;
+    color: rgba(192, 202, 245, 0.5);
+    font-weight: normal;
+    padding: 2px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(65, 72, 104, 0.8);
+    border-radius: 2px;
+}
+
+#tray menu {
+    background-color: rgba(31, 35, 53, 0.98);
+    border: 0.5px solid rgba(122, 162, 247, 0.3);
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#tray menu menuitem {
+    background-color: transparent;
+    color: #c0caf5;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    font-size: 9px;
+}
+
+#tray menu menuitem:hover {
+    background-color: rgba(65, 72, 104, 0.7);
+    color: #c0caf5;
+}
+
+#custom-power {
+    color: #c0caf5;
+    padding: 0 6px;
+    margin: 0 2px;
+    font-size: 15px;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#custom-power:hover {
+    background-color: rgba(65, 72, 104, 0.7);
+    color: #c0caf5;
+}
+
+menu {
+    background-color: rgba(31, 35, 53, 0.98);
+    border: 0.5px solid rgba(122, 162, 247, 0.3);
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+menuitem {
+    background-color: transparent;
+    color: #c0caf5;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    font-size: 9px;
+}
+
+menuitem:hover {
+    background-color: rgba(65, 72, 104, 0.7);
+    color: #c0caf5;
+}
+
+menu separator {
+    background-color: rgba(122, 162, 247, 0.2);
+    margin: 4px 0;
+}
+
+#workspaces button:nth-child(n + 6) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}

@@ -1,0 +1,2 @@
+Arch Linux Wiki|https://wiki.archlinux.org/
+MangoWC Wiki|https://github.com/DreamMaoMao/mangowc/wiki
